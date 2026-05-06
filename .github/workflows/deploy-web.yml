@@ -79,7 +79,6 @@ jobs:
           flutter build web \
             --release \
             --base-href / \
-            --web-renderer canvaskit
 
       - name: Build and push Docker image
         working-directory: mobile
