@@ -148,10 +148,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          _buildHomeTab(),
-          const CommandCenterScreen(),
-          
-          _buildSettingsTab(),
+          _buildHomeTab(),          // index 0 — Home
+          const CommandCenterScreen(), // index 1 — Command
+          const GroundRealityScreen(), // index 2 — Ground
+          _buildSettingsTab(),      // index 3 — Profile
         ],
       ),
       bottomNavigationBar: _buildBottomNav(),
