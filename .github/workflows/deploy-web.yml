@@ -78,8 +78,7 @@ jobs:
         run: |
           flutter build web \
             --release \
-            --base-href / \
-            --web-renderer canvaskit
+            --base-href /
 
       - name: Build and push Docker image
         working-directory: mobile
