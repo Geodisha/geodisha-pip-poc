@@ -993,10 +993,11 @@ def booth_score_trends(
 # BOOT
 # ═══════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
+    import os as _os
     uvicorn.run(
         app,           # pass the app object directly — avoids double-import reload
         host="0.0.0.0",
-        port=8000,
+        port=int(_os.environ.get("PORT", 8000)),  # Cloud Run injects PORT=8080
         reload=False,
         log_level="info",
         workers=1,
